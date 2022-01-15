@@ -2,6 +2,10 @@
   "name": "portfolio",
   "version": "0.0.0",
   "private": true,
+  "engines": {
+    "node": "16.13.2",
+    "npm":  "8.1.2"
+  },
   "scripts": {
     "dev": "nodemon ./bin/www",
     "start" : "node ./routes/index.js"
