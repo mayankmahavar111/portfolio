@@ -7,4 +7,16 @@ block content
 
   div 
     a(href="/blog") Blog
-    div automatic redirect in 5 sec
+    div automatic redirect in <span id="redirectNumber"> 5</span> sec
+  script(type="text/javascript"). 
+    $(document).ready(function(){
+      var startNumber = 5;
+      var redirectInterval =  setInterval(function(){
+        startNumber = startNumber -1;
+        if (startNumber<=0){
+          window.location.replace('/blog');
+          clearInterval(redirectInterval);
+        }
+        $('#redirectNumber').text(startNumber);
+      },1000)
+    });
