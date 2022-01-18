@@ -1,2 +1,2 @@
 # portfolio
-web app for fun
+This is website creacted on react + node + express tech stack
