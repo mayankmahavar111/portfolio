@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-import {React, useEffect,useState} from 'react';
+import {React} from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
+import Portfolio from './components/portfolio';
 
 function App() {
 
-  const [data, setData] = useState(null);
-
-  useEffect(()=>{
-    fetch('/api')
-      .then(res => res.json())
-      .then(data => setData(data.message))
-  },[]);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          {!data ? "don`t know this is coming or not" : data}
-        </p>
-      </header>
+    <div>
+      Inside app js
     </div>
   );
 }
